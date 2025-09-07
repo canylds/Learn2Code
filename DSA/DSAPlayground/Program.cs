@@ -1,20 +1,19 @@
-﻿using DSAPlayground.Common;
-using DSAPlayground.Arrays;
+﻿using DSAPlayground.Arrays;
+using DSAPlayground.LinkedLists;
 
 ArrayExamples.RunAll();
+MySinglyLinkedListHelper();
 
-/*
-DSPlayground/
- ├── Program.cs
- ├── Arrays/
- │    └── ArrayExamples.cs      (static class → utility fonksiyonlar)
- ├── LinkedLists/
- │    ├── LinkedListExamples.cs (static class → hazır listelerle deneme)
- │    └── MyLinkedList.cs       (class → kendi implementasyonun)
- ├── Stacks/
- │    ├── StackExamples.cs      (static class → hazır stack kullanımı)
- │    └── MyStack.cs            (class → kendi implementasyonun)
- └── Common/
-      └── Printer.cs            (static class → yazdırma fonksiyonları vs.)
 
-*/
+static void MySinglyLinkedListHelper()
+{
+    Console.WriteLine("--- My Singly Linked List ---");
+
+    MySinglyLinkedList<int> mySinglyLinkedList = new MySinglyLinkedList<int>(firstData: 4);
+    mySinglyLinkedList.AddLast(3);
+    mySinglyLinkedList.AddFirst(5);
+    mySinglyLinkedList.RemoveFirst();
+    mySinglyLinkedList.RemoveLast();
+
+    mySinglyLinkedList.PrintList();
+}
